@@ -12,3 +12,6 @@
 
 <h3>👀skills</h3>
 <p>Design, html5, scss, javascript</p>
+<br/>
+<br/>
+<b>Go!🐥</b><a href="http://garyung.com/ADER/index.html">http://garyung.com/ADER</a>
