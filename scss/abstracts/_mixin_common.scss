@@ -1,0 +1,59 @@
+// Position
+@mixin position($x, $xvalue, $y, $yvalue) {
+  position: absolute;
+  #{$x}: $xvalue;
+  #{$y}: $yvalue;
+  @if $xvalue == 50% and $yvalue == 50% {
+    transform: translate(-50%, -50%);
+  } @else if $xvalue == 50% {
+    transform: translateX(-50%);
+  } @else if $yvalue == 50% {
+    transform: translateY(-50%);
+  }
+}
+
+// Background
+// 파일명, x축, y축, 배경색, 가로크기, 세로크기
+@mixin bg($fileName, $x: null, $y: null, $size: null) {
+  background: url(#{$imageUrl}#{$fileName}) no-repeat $x $y / $size;
+}
+
+// IR
+@mixin hide {
+  overflow: hidden;
+  display: block;
+  position: absolute;
+  border: 0;
+  width: 1px;
+  height: 1px;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+// 말줄임표
+@mixin ellipse {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+//애니메이션
+@mixin animate($animation, $duration, $method, $delay, $state) {
+  animation: $animation $duration $method $delay $state;
+}
+
+//키프레임
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+
+  @keyframes #{$name} {
+    @content;
+  }
+}

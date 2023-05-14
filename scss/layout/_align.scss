@@ -1,0 +1,22 @@
+.align {
+  display: flex;
+  &.both {
+    justify-content: space-between;
+  }
+  &.center {
+    justify-content: center;
+  }
+  &.vm {
+    align-items: center;
+  }
+}
+
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.clear {
+  clear: both;
+}
